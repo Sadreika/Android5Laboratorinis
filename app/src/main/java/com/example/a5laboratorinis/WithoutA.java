@@ -35,7 +35,7 @@ public class WithoutA extends Fragment {
                 basles += 1;
             }
 
-            if(!oneletter.equals(" "))
+            if(!oneletter.equals("") && !oneletter.equals(" "))
             {
                 if(oneletter.equals(oneletter.toUpperCase()))
                 {
