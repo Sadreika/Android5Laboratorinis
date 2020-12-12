@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("text", text);
         WithoutA fragment = new WithoutA();
+        fragment.setArguments(bundle);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frame, fragment);
         fragmentTransaction.addToBackStack("backStack");

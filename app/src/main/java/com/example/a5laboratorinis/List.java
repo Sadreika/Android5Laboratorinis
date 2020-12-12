@@ -23,10 +23,16 @@ public class List extends Fragment {
         listView = (ListView) view.findViewById(R.id.listView);
         final ArrayList<String> arrayList = new ArrayList<>();
 
-        arrayList.add("Testinis pirmas variantas");
-        arrayList.add("Kitas testinis variantas");
-        arrayList.add("sddssdsfds");
-        arrayList.add("testinis trecias variantas");
+        arrayList.add("Tekstas su A raidėmis");
+        arrayList.add("Be ieškomo simbolio");
+        arrayList.add("Čia yra ieškomas simbolis");
+        arrayList.add("Nieko nebus");
+        arrayList.add("Rasi ko ieškai");
+        arrayList.add("Tekstas su A raidėmis");
+        arrayList.add("Be ieškomo simbolio");
+        arrayList.add("Čia yra ieškomas simbolis");
+        arrayList.add("Nieko nebus");
+        arrayList.add("Rasi ko ieškai");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
@@ -43,7 +49,7 @@ public class List extends Fragment {
 
     private void fragment (String text)
     {
-        if(text.indexOf('a') >= 0 || text.indexOf('A') >= 0)
+        if(text.toLowerCase().contains("a"))
         {
             MainActivity.WithA(text);
         }

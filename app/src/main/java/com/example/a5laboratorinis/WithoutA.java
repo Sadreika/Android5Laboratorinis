@@ -14,7 +14,7 @@ public class WithoutA extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_with_a, container, false);
+        View view = inflater.inflate(R.layout.fragment_without_a, container, false);
         Bundle bundle = this.getArguments();
         String text = bundle.getString("text");
         textView = view.findViewById(R.id.textView);
@@ -22,19 +22,20 @@ public class WithoutA extends Fragment {
         int basles = 0;
         int uppercase = 0;
 
-        char[] chars = new char[text.length()];
-        for(char oneletter : chars)
+        String[] textChars = text.split("");
+        for(String oneletter : textChars)
         {
-            if(Character.toLowerCase(oneletter) == 'a' ||
-                    Character.toLowerCase(oneletter) == 'u' ||
-                    Character.toLowerCase(oneletter) == 'e' ||
-                    Character.toLowerCase(oneletter) == 'i' ||
-                    Character.toLowerCase(oneletter) == 'o'
+            if(oneletter.toLowerCase().equals("a") ||
+                    oneletter.toLowerCase().equals("u") ||
+                    oneletter.toLowerCase().equals("i") ||
+                    oneletter.toLowerCase().equals("o") ||
+                    oneletter.toLowerCase().equals("e")
             )
             {
                 basles += 1;
             }
-            if(Character.isUpperCase(oneletter))
+
+            if(!oneletter.equals(oneletter.toUpperCase()))
             {
                 uppercase += 1;
             }

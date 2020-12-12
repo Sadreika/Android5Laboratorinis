@@ -19,10 +19,10 @@ public class WithA extends Fragment {
         textView = view.findViewById(R.id.textView);
 
         int count = 0;
-        char[] chars = new char[text.length()];
-        for(char oneletter : chars)
+        String[] textChars = text.split("");
+        for(String oneChar : textChars)
         {
-            if(Character.toLowerCase(oneletter) == 'a')
+            if(oneChar.toLowerCase().equals("a"))
             {
                 count += 1;
             }
