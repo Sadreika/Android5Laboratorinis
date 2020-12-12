@@ -35,9 +35,12 @@ public class WithoutA extends Fragment {
                 basles += 1;
             }
 
-            if(!oneletter.equals(oneletter.toUpperCase()))
+            if(!oneletter.equals(" "))
             {
-                uppercase += 1;
+                if(oneletter.equals(oneletter.toUpperCase()))
+                {
+                    uppercase += 1;
+                }
             }
         }
         textView.setText("zodis " + text + " turi " + text.length() + " raides\n"
