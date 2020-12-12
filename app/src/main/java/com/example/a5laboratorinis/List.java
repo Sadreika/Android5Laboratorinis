@@ -30,9 +30,6 @@ public class List extends Fragment {
         arrayList.add("Rasi ko ieškai");
         arrayList.add("Tekstas su A raidėmis");
         arrayList.add("Be ieškomo simbolio");
-        arrayList.add("Čia yra ieškomas simbolis");
-        arrayList.add("Nieko nebus");
-        arrayList.add("Rasi ko ieškai");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
